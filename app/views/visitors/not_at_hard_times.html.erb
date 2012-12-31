@@ -1,0 +1,9 @@
+<h1>Nope,</h1>
+<p>
+  <%= @visitor_name %> isn't at hardtimes.
+</p>
+
+<%= form_tag(visitor_arrival_url(@visitor_name)) do |form| %>
+  <%= submit_tag "#{@visitor_name} has arrived." %>
+<% end %>
+

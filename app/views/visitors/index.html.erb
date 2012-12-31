@@ -1,0 +1,5 @@
+<%= form_tag(visitors_search_url, :method => :get) do %>
+  <%= label_tag :visitor_name, "Who are you looking for?" %>
+  <%= text_field_tag :visitor_name %>
+  <%= submit_tag 'are they at hard times?' %>
+<% end %>

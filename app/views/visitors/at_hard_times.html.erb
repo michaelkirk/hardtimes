@@ -1,0 +1,8 @@
+<h1>Yup,</h1>
+<p>
+  <%= @visitor_name %> is at hardtimes.
+</p>
+
+<%= form_tag(visitor_departure_url(@visitor_name)) do |form| %>
+  <%= submit_tag "#{@visitor_name} has left." %>
+<% end %>
