@@ -20,11 +20,24 @@ body {
   font-family: Helvetica, Sans
 }
 
+input {
+  font-size: 33px;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+
 h1 {
   font-size: 60px;
   margin-bottom: 15px;
 }
 
+#header a {
+  text-decoration: none;
+  color: #eee;
+}
 #header {
   margin-left: auto;
   margin-right: auto;
@@ -32,8 +45,15 @@ h1 {
   font-size: 80px;
   font-weight: 800;
   border-bottom: solid #eee 3px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 #middle {
-  padding: 10px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+

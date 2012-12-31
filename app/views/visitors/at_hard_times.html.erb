@@ -2,7 +2,7 @@
 <p>
   <%= @visitor_name %> is at hardtimes.
 </p>
-
+<br />
 <%= form_tag(visitor_departure_url(@visitor_name)) do |form| %>
   <%= submit_tag "#{@visitor_name} has left." %>
 <% end %>
