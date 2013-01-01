@@ -49,13 +49,12 @@ Hardtimes::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  get '/', :to => 'visitors#index', :constraints => {:subdomain => ""}
-  get '/', :to => 'visitors#show'
+  root :to => 'visitors#index', :constraints => {:subdomain => ""}
+  root :to => 'visitors#show'
+  post '/arrive', :to => 'visitors#arrive', :as => 'visitor_arrival'
+  post '/leave', :to => 'visitors#leave', :as => 'visitor_departure'
 
   get '/visitors/search', :to => 'visitors#search', :as => 'visitors_search'
-  get '/visitors/:visitor_name', :to => 'visitors#show', :as => 'visitor'
-  post '/visitors/:visitor_name/arrive', :to => 'visitors#arrive', :as => 'visitor_arrival'
-  post '/visitors/:visitor_name/leave', :to => 'visitors#leave', :as => 'visitor_departure'
 
   # See how all your routes lay out with "rake routes"
 

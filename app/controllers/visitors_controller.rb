@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
   def search
-    redirect_to visitor_url(params[:visitor_name]);
+    redirect_to root_url(:subdomain => params[:visitor_name])
   end
 
   def index
@@ -20,7 +20,7 @@ class VisitorsController < ApplicationController
   def arrive
     @visitor_name = params[:visitor_name] || request.subdomain
     @visit = Visit.for_visitor_name(@visitor_name).create!(arrived_at: Time.now)
-    redirect_to visitor_url(@visitor_name)
+    redirect_to root_url(:subdomain => @visitor_name)
   end
 
   def leave
@@ -30,6 +30,6 @@ class VisitorsController < ApplicationController
 
     @visit.leave
     @visit.save!
-    redirect_to visitor_url(@visitor_name)
+    redirect_to root_url(:subdomain => @visitor_name)
   end
 end
