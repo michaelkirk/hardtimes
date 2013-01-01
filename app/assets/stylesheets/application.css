@@ -40,13 +40,11 @@ h1 {
 }
 
 #header {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   font-size: 80px;
   font-weight: 800;
   border-bottom: solid #eee 3px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   padding-bottom: 15px;
 }
 
@@ -61,6 +59,9 @@ h1 {
 #footer {
   background: #222 url('baphomet-pentagram.jpg') no-repeat center;
   height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0.2;
 }
 
