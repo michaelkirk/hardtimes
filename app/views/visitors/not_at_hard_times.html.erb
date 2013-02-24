@@ -2,8 +2,14 @@
 <p>
   <%= @visitor_name %> isn't at hardtimes.
 </p>
-<br />
-<br />
+<p class="last-seen">
+<% if @visit %>
+(they left <%= time_ago_in_words(@visit.left_at) %> ago)
+<% else %>
+Never even heard of 'em.
+<% end %>
+</p>
+
 <br />
 <%= form_tag(visitor_arrival_url(@visitor_name)) do |form| %>
   <%= submit_tag "Press if #{@visitor_name} has arrived." %>
