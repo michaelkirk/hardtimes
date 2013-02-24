@@ -21,6 +21,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'annotate'
   gem 'pry'
   gem 'rspec-rails'
 end

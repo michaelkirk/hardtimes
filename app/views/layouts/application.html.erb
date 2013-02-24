@@ -13,8 +13,10 @@
   <%= yield %>
 </div>
 
-<div id="footer">
-</div>
+<%= link_to whois_url(subdomain: "whois") do %>
+  <div id="footer">
+  </div>
+<% end %>
 
 </body>
 </html>

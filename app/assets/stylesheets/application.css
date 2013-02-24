@@ -34,6 +34,11 @@ h1 {
   margin-bottom: 15px;
 }
 
+h2 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
 #header a {
   text-decoration: none;
   color: #eee;
@@ -63,6 +68,14 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   opacity: 0.2;
+}
+
+a, a:visited {
+  color: black;
+}
+
+form.search {
+  margin-top: 40px;
 }
 
 

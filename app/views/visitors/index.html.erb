@@ -1,4 +1,16 @@
-<%= form_tag(visitors_search_url, :method => :get, :class=> 'search') do %>
+<% if @current_visits.empty? %>
+  <h2>No recent sighting.</h2>
+<% else %>
+  <h2>Recent sightings</h2>
+  <ul>
+    <% @current_visits.each do |visit|  %>
+      <li><%= link_to(visit.visitor_name, visitor_url(:subdomain => visit.visitor_name)) %> was seen <%= time_ago_in_words(visit.arrived_at) %> ago.</li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_tag(visitors_search_url, :method => :get, :class => 'search') do %>
   <%= label_tag :visitor_name, "Who are you looking for?" %>
   <br />
   <br />

@@ -4,6 +4,7 @@ class VisitorsController < ApplicationController
   end
 
   def index
+    @current_visits = Visit.current
   end
 
   def show
