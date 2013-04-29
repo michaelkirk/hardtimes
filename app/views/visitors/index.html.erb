@@ -9,6 +9,14 @@
   </ul>
 <% end %>
 
+<div id="chart">
+</div>
+<script type="text/javascript">
+  $(function(){
+    new VisitorPieChart(<%= @visit_count_json %>);
+  });
+</script>
+
 
 <%= form_tag(visitors_search_url, :method => :get, :class => 'search') do %>
   <%= label_tag :visitor_name, "Who are you looking for?" %>
