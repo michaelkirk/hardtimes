@@ -1,9 +1,3 @@
-/*!
- * g.Raphael 0.51 - Charting library, based on Raphaël
- *
- * Copyright (c) 2009-2012 Dmitry Baranovskiy (http://g.raphaeljs.com)
- * Licensed under the MIT (http://www.opensource.org/licenses/mit-license.php) license.
- */
 (function(){function t(f,k,l,i,d,b){function t(d,b,c,e,f){var a=Math.PI/180,g=d+c*Math.cos(-e*a),i=d+c*Math.cos(-f*a),h=d+c/2*Math.cos(-(e+(f-e)/2)*a),j=b+c*Math.sin(-e*a),k=b+c*Math.sin(-f*a),a=b+c/2*Math.sin(-(e+(f-e)/2)*a),d=["M",d,b,"L",g,j,"A",c,c,0,+(180<Math.abs(f-e)),1,i,k,"z"];d.middle={x:h,y:a};return d}var b=b||{},q=[],m=f.set(),a=f.set(),n=f.set(),o=d.length,h=0,j=0,p=0,g=b.maxSlices||100,e=parseFloat(b.minPercent)||1,r=Boolean(e);a.covers=m;if(1==o)n.push(f.circle(k,l,i).attr({fill:b.colors&&
 b.colors[0]||this.colors[0],stroke:b.stroke||"#fff","stroke-width":null==b.strokewidth?1:b.strokewidth})),m.push(f.circle(k,l,i).attr(this.shim)),j=d[0],d[0]={value:d[0],order:0,valueOf:function(){return this.value}},b.href&&b.href[0]&&m[0].attr({href:b.href[0]}),n[0].middle={x:k,y:l},n[0].mangle=180;else{for(var c=0;c<o;c++)j+=d[c],d[c]={value:d[c],order:c,valueOf:function(){return this.value}};d.sort(function(c,d){return d.value-c.value});for(c=0;c<o;c++)if(r&&100*d[c]/j<e&&(g=c,r=!1),c>g)r=!1,
 d[g].value+=d[c],d[g].others=!0,p=d[g].value;o=Math.min(g+1,d.length);p&&d.splice(o)&&(d[g].others=!0);for(c=0;c<o;c++){p=h-360*d[c]/j/2;c||(h=90-p,p=h-360*d[c]/j/2);if(b.init)var s=t(k,l,1,h,h-360*d[c]/j).join(",");g=t(k,l,i,h,h-=360*d[c]/j);e=b.matchColors&&!0==b.matchColors?d[c].order:c;e=f.path(b.init?s:g).attr({fill:b.colors&&b.colors[e]||this.colors[e]||"#666",stroke:b.stroke||"#fff","stroke-width":null==b.strokewidth?1:b.strokewidth,"stroke-linejoin":"round"});e.value=d[c];e.middle=g.middle;
