@@ -5,6 +5,7 @@ class VisitorsController < ApplicationController
 
   def index
     @current_visits = Visit.current
+    @visit_count_json = Visit.group(:visitor_name).count(:visitor_name).to_json.html_safe
   end
 
   def show
